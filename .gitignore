@@ -1,0 +1,16 @@
+# Trained model
+model.pkl
+
+# Dataset
+dataset/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables
+.env
