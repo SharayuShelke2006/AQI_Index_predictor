@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AQI Prediction System</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <header>
+        <h2>🌿 CleanAir</h2>
+        <p>Air Quality Prediction System</p>
+    </header>
+
+
+    <div class="container">
+
+        <h1>Air Quality Predictor</h1>
+
+        <p class="description">
+            Enter pollutant concentrations to predict
+            the Air Quality Index.
+        </p>
+
+
+        <form method="POST">
+
+            <div class="input-grid">
+
+                {% for feature in features %}
+
+                <div class="input-group">
+
+                    <label>{{ feature }}</label>
+
+                    <input
+                        type="number"
+                        name="{{ feature }}"
+                        placeholder="Enter {{ feature }}"
+                        min="0"
+                        step="any"
+                        required
+                    >
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+
+            <button type="submit">
+                Predict AQI
+            </button>
+
+        </form>
+
+
+        {% if error %}
+
+        <div class="error">
+            {{ error }}
+        </div>
+
+        {% endif %}
+
+
+        {% if prediction is not none %}
+
+        <div class="result">
+
+            <h2>Prediction Result</h2>
+
+            <h1>{{ prediction }}</h1>
+
+            <h3>{{ category }}</h3>
+
+            <p>Predicted Air Quality Index</p>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <footer>
+        Built using Python, Flask and Machine Learning
+    </footer>
+
+</body>
+
+</html>
