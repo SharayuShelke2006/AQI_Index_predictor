@@ -77,3 +77,6 @@ AQI_Prediction/
 This is an educational project.
 Predictions are estimates and are not official
 air quality measurements or health advice.
+
+<img width="956" height="485" alt="image" src="https://github.com/user-attachments/assets/9a45d4ac-1639-4a57-9413-900682791ecf" />
+
