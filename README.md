@@ -48,8 +48,12 @@ AQI_Prediction/
 1. Clone or download the project.
 
 2. Install dependencies:
-
-   pip install -r requirements.txt
+   
+      flask
+      pandas
+      numpy
+      scikit-learn
+      joblib
 
 3. Make sure model.pkl is in the main project folder.
 
