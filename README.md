@@ -1,4 +1,3 @@
-
 # Air Quality Index Prediction
 
 ## About the Project
